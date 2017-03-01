@@ -1,0 +1,2 @@
+require './battle'
+run Battle
