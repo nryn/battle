@@ -1,9 +1,11 @@
-<%= @name_1 %> vs. <%= @name_2 %>
-
-<%= @name_2 %> HP: 100
+<%= $player_1.name %> vs. <%= $player_2.name %>
 
 <% if params[:attack] %>
-<%= @name_1 %> attacked <%= @name_2 %>
+<% $player_2.reduce_hit_points %>
+<%= $player_1.name %> attacked <%= $player_2.name %>
 <% end %>
+
+<%= $player_2.name %> HP: <%= $player_2.hit_points %>
+
 
 <a href="/play?attack=true">Attack!</a>
