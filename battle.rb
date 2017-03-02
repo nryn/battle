@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 class Battle < Sinatra::Base
-  set :sessions, true
+  enable :sessions
 
   get '/' do
     erb(:index)

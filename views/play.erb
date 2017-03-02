@@ -1,1 +1,11 @@
 <%= @name_1 %> vs. <%= @name_2 %>
+
+<%= @name_2 %> HP: 100
+
+<% if params[:attack] %>
+<%= "Player 1 attacked Player 2" %>
+<% end %>
+
+<form action="/play">
+  <input type="submit" name="attack" value="Attack!">
+</form>
