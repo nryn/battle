@@ -3,9 +3,7 @@
 <%= @name_2 %> HP: 100
 
 <% if params[:attack] %>
-<%= "Player 1 attacked Player 2" %>
+<%= @name_1 %> attacked <%= @name_2 %>
 <% end %>
 
-<form action="/play">
-  <input type="submit" name="attack" value="Attack!">
-</form>
+<a href="/play?attack=true">Attack!</a>
